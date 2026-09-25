@@ -19,17 +19,18 @@
 
         // ⚠️ 请在这里替换为您在 Firebase 控制台获取的真实配置 ⚠️
         const firebaseConfig = {
-            apiKey: "YOUR_API_KEY",
-            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-            projectId: "YOUR_PROJECT_ID",
-            storageBucket: const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
-};
+            apiKey: "AIzaSyABkG-vKfnWvFTsm4_0HbxhYmjF6Hl915I",
+  authDomain: "sg-check-in-out.firebaseapp.com",
+  projectId: "sg-check-in-out",
+  storageBucket: "sg-check-in-out.firebasestorage.app",
+  messagingSenderId: "122032675688",
+  appId: "1:122032675688:web:f052ffd60e484dd5ed54dd",
+  measurementId: "G-NQ4PK3FC0H"
+        };
+
+        // 初始化 Firebase 与 Firestore 数据库
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
 
         window.db = db;
         window.firestoreTools = { collection, addDoc, onSnapshot, query, orderBy, getDocs };
